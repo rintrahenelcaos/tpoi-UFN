@@ -1,0 +1,521 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto+Slab" ;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+        
+}
+
+body {
+    
+    margin: 0;
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+/*header*/
+
+
+
+#navbar_principal {
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    background-color: white;
+    box-shadow: 0 0.2em 0.1em rgba(0, 0,0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    z-index: 100;
+    
+}
+
+.navbar_izquierda {
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/*logos*/
+
+.navbar_logo {
+    
+    color: #373737;
+
+}
+
+
+
+.logo_navbar_institucional img {
+    margin: 0;
+    object-fit: scale-down;
+    width: 7.8em ;
+    height: 7.8em;
+    
+}
+
+.logo_navbar_nombre {
+    margin: 0;
+    
+    width: 15em;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+h1 {
+    color: #228978;
+    font-size: 1.8em;
+}
+
+h1 span {
+    font-size:smaller;
+}
+/*nnavbar derecha*/
+
+.navbar_derecha {
+    
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    
+    z-index: 100;
+    
+}
+
+
+
+
+/*lista de links a la derecha*/
+
+.navbar_lista_links ul {
+    
+    list-style: none;
+    
+}
+
+.navbar_lista_links ul li {
+    float: left;
+    position: relative;     
+    background-color: white;
+    
+}
+
+.navbar_lista_links li a, .aula_navbar a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin:0;
+    
+    color: #373737;
+    padding: 1.5em;
+    width: 8em;
+    height: 8em;
+    font-family: 'Roboto Slab', serif;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+}
+
+.aula_navbar_responsive {
+    display: none;
+}
+
+.navbar_lista_links li a:hover {
+    color: #4ca9ee;
+    background-color: #dce0e3;
+}
+
+.navbar_derecha ul li ul {
+    position: absolute;
+    left: 0;
+    width: inherit;
+    display: none;
+    z-index: 50;
+    box-shadow: 0 0.2em 0.1em rgba(0, 0,0, 0.2);
+    
+    
+    
+}
+
+.navbar_derecha ul li ul li{
+    width: 100%;
+    
+}
+
+
+.navbar_derecha ul li:focus-within > ul,
+.navbar_derecha ul li:hover > ul{
+    display: initial;
+}
+
+.iconos_sociales {
+    display: flex;
+    flex-direction: column;    
+    width: 3.5em;
+    height: 8em;
+    
+    
+}
+
+.iconos_sociales a {
+    margin-top: 0.2em;
+    flex: 1;
+    text-align: center;
+    color: #373737;
+    text-decoration: none;
+
+}
+
+
+
+.aula_navbar a{
+    text-align: center;
+    color:#373737;
+    background-color: #5dcd81;
+    text-decoration: none;
+    
+}
+
+.aula_navbar a:hover {
+    background-color: #373737;
+    color:#dce0e3;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.icon {
+    display: none;
+}
+
+.navbar_derecha .icono_menu_responsive {
+    display: none;
+    margin: 0;
+    width: 5em;
+    align-items: center;
+}
+
+
+/*contenido*/
+
+.central {
+    background-color: aqua;
+}
+
+.acceso_rapido{
+    background-color: blue;
+}
+
+.calesita_noticias{
+
+    background-color: cadetblue;
+}
+
+.inscripciones {
+    background-color: aqua;
+}
+
+.menu-icon {display: none;}
+
+
+/*footer*/
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0;
+    width: 100%;
+    background-color: #373737;
+    height: 12em;
+    color: #dce0e3;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.logo_footer_institucional img {
+    margin: 0;
+    object-fit: scale-down;
+    width: 7em ;
+    height: 7em;
+    
+}
+
+footer .footer_institucional {
+    font-size: 1.3em;
+    padding: 0.5em;
+}
+
+footer .contacto_footer a {
+    color: #dce0e3;
+    text-decoration: none;
+    font-size: 1.5em;
+
+}
+
+/* responsive */
+
+@media (max-width: 991px) {
+
+    /*barra navegacion*/
+    body {
+        font-size: 85%;
+    }
+    
+    .navbar_lista_links {
+        position: absolute;
+        
+        top: 100%;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0.2em 0.1em rgba(0, 0,0, 0.2);
+        display: none;
+        
+        
+    }
+
+    .navbar_derecha {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .aula_navbar {
+        display: flex;
+        order: 1;
+        
+        
+    }
+    .aula_navbar a {
+        max-width: 8em;
+    }
+
+    .iconos_sociales {
+        order: 2;
+    }
+
+       
+    .navbar_lista_links ul li {
+        width: 100%;
+        
+        
+    }
+
+    .navbar_lista_links li a {
+        display: block;
+        flex: 1;
+            
+        text-align: center;
+        
+        color: #373737;
+        padding: 0.5em;
+        width: 100%;
+        height: auto;
+        
+
+    
+    }
+
+    .navbar_derecha ul li ul {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        
+        
+        
+    }
+
+
+    .icon {
+        display: block;
+        margin-left: 0.2em;
+        margin: 0.5em;
+        font-size: 1.5em;
+        color: #373737;
+        
+        order: 3;
+    }
+     /*footer*/
+
+     footer .footer_institucional {
+        
+        padding: 0em;
+    }
+
+
+
+    /*contenido*/
+
+}
+
+@media (max-width: 991px) {
+        .navbar_lista_links.responsive {
+            display: initial;
+            
+}
+}
+        
+
+@media (max-width: 600px){
+
+    body {
+        font-size: 75%;
+    }
+
+    /*barra navegacion*/
+    .logo_navbar_nombre {
+        width: 80%;
+    }
+    
+    
+
+    .navbar_derecha {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .aula_navbar {
+        display: flex;
+        order: 1;
+        
+        
+    }
+    .aula_navbar a {
+        max-width: 8em;
+    }
+
+    .iconos_sociales {
+        order: 2;
+    }
+
+    .navbar_lista_links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -200%;
+        top: 100%;
+        min-height: 100%;
+        margin-left: auto;
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+        transition: all 1.2s;
+        -webkit-transition: all 1.2s;
+        -moz-transition: all 1.2s;
+        -ms-transition: all 1.2s;
+        -o-transition: all 1.2s;
+        
+}
+
+    .navbar_lista_links ul {
+        
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;        
+        width: 100%;
+        height: auto;
+        flex: 1;
+        
+        
+        
+        text-align: center;
+}
+    
+       
+    .navbar_lista_links ul li {
+        display: initial;
+        flex: 1;
+        display: flex;
+        background-color: white;
+       
+        
+    }
+
+    .navbar_lista_links li a {
+        display: block;
+        flex: 1;
+                    
+        text-align: left;
+        
+        color: #373737;
+        padding: 1em;
+        border-top: 0.2em solid #373737;
+        height: auto;
+    }
+
+    .navbar_lista_links ul li ul {
+        position: initial;
+        width: 100%;
+        display:block;
+        
+        height: auto;
+       
+        
+    }
+
+    .navbar_lista_links ul li ul li {
+        
+        
+        display: block;
+        
+        margin-top: auto;
+        height: auto;
+        
+        
+        
+        
+    }
+
+    .icon {
+        display: block;
+        margin: 1em;
+        
+        order: 3;
+    }
+
+    .iconos_sociales{
+        display: none;
+    }
+
+ 
+    /*footer*/
+
+    footer {
+        flex-direction: column;
+
+    }
+
+    /*contenido*/
+}
+
+@media (max-width: 600px) {
+    .navbar_lista_links.responsive {
+        
+        right: 0%;
+        
+        
+}
+}

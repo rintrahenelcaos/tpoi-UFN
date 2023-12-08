@@ -1,0 +1,60 @@
+
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Información sobre la Cursada - UFN {% endblock  %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+
+{% block titulo_bufanda %}Regimen de Cursada{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+<div id="contenedor_alumnos">
+    <section id="informacion_inscripciones">
+    
+        <section class="parrafo_general">
+            <p>
+                Aquí están las condiciones obligatorias a cumplir para cursar en la UFN. Leelas atentamente antes de inscribirte.
+                
+            </p>
+        </section>
+
+    </section>
+
+    <section id="regimen_punto_punto">
+        <h6>Régimen Académico</h6><br>
+        <ol>
+            <li>La matriculación por materia se realiza al principio del cuatrimestre</li>
+            <li>La falta de pago de la matrícula implicará la no regularización de la materia</li>
+            <li>Todos los cursos y carreras se dictan de forma semipresencial</li>
+            <li>Las materias se dividen en:
+                <ol>
+                    <li>Materias Teóricas: se dictan en forma remota asincrónica y deben ser rendidas de forma presencial. 
+                        <ul>
+                            <li>El material se accede desde el Aula Virtual</li>
+                            <li>La condición de regularidad es aprobar dos exámenes parciales pudiendo recuperarse solo uno de ellos durante el cuatrimestre que se cursa</li>
+                            <li>La acreditación está sujeta a la aprobación de un examen final dentro de los dos cuatrimestres posteriores a la regularización</li>
+                            <li>La no regularización implica la imposibilidad de acreditación de la materia sin excepción</li>
+                        </ul>
+                    </li>
+                    <li>Materias Prácticas: se dictan de forma presencial 
+                        <ul>
+                            <li>Se dictan en los laboratorios de las sedes de la UFN </li>
+                            <li>La condición de regularidad se obtiene al obtener el 85% de asistencia al final de la cursada</li>
+                            <li>La acreditación se obtiene a partir de la evaluación colegiada por los docentes a cargo del desempeño del estudiante regular durante las prácticas</li>
+                            <li>La regularidad no implica la acreditación</li>
+                        </ul>
+                    </li>
+                </ol> 
+            </li>
+            <li>Las correlatividad de las materias está sujeta a la regularidad. La no acreditación de materias correlativas implica la acreditación condicionada de la materia hasta la acreditación correspondiente. Si no se logra la acreditación en el tiempo estipulado la materia figurará como acreditada condicionada lo que le quitará la condición de regular hasta que se acredite su correlativa.</li>
+        </ol>
+    </section>
+</div>    
+    
+{% endblock  %}

@@ -1,0 +1,109 @@
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %}Nuestras Carreras - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+{% block titulo_bufanda %}Nuestra Oferta Académica{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+
+<section id="carreras">
+    <center>  <h2>Carreras de Enfermería</h2>
+      <p>Descubre nuestras opciones de formación en enfermería:</p>
+  
+      <div class="opciones-carreras">
+          <div class="carrera-enfermeria">
+              <h3>Carrera de Enfermería</h3>
+              <p>Conviértete en enfermero/a profesional con nuestro programa de grado.</p>
+              <button onclick="mostrarInformacion('carrera-enfermeria')">Más información</button>
+              <div class="informacion" id="carrera-enfermeria-info">
+                  <p>Duración: 4 años</p>
+                  <p>Requisitos de admisión</p>
+                  <p>Plan de estudios</p>
+              </div>
+          </div>
+  
+          <div class="tecnicaturas">
+              <h3>Tecnicaturas</h3>
+              <p>Explora nuestras opciones de tecnicaturas en enfermería:</p>
+              <button onclick="mostrarInformacion('tecnicaturas')">Más información</button>
+              <div class="informacion" id="tecnicaturas-info">
+                  <p>Tecnicatura en Enfermería Pediátrica</p>
+                  <p>Tecnicatura en Enfermería Geriátrica</p>
+              </div>
+          </div>
+          
+          <div class="diplomaturas">
+              <h3>Diplomaturas</h3>
+              <p>Descubre nuestras diplomaturas en enfermería:</p>
+              <button onclick="mostrarInformacion('diplomaturas')">Más información</button>
+              <div class="informacion" id="diplomaturas-info">
+                  <p>Diplomatura en Enfermería de Cuidados Intensivos</p>
+                  <p>Diplomatura en Enfermería Comunitaria</p>
+              </div>
+          </div>
+          </div>
+          
+          <script>
+          function mostrarInformacion(id) {
+              var info = document.getElementById(id + '-info');
+              if (info.style.display === 'none' || info.style.display === '') {
+                  info.style.display = 'block';
+              } else {
+                  info.style.display = 'none';
+              }
+          }
+          </script>
+          
+  
+  <style>
+      .opciones-carreras {
+          display: flex;
+          justify-content: space-around;
+      }
+  
+      .carrera-enfermeria, .tecnicaturas, .diplomaturas {
+          text-align: center;
+          margin: 20px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      .carrera-enfermeria img, .tecnicaturas img, .diplomaturas img {
+          max-width: 100%;
+          height: auto;
+          margin: 10px 0;
+      }
+  
+      .informacion {
+          display: none;
+          margin-top: 10px;
+      }
+  
+      button {
+          background-color: #007BFF;
+          color: #fff;
+          padding: 5px 15px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+  </style>
+  
+              </section>
+          </div>
+      </div>
+    
+
+    
+
+   
+    
+{% endblock  %}

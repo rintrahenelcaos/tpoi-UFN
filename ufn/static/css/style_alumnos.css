@@ -1,0 +1,906 @@
+
+
+
+
+#main {
+    margin-top: 8em;
+    height: 100%;
+}
+
+/* tiutlos generales, usar siempre para mantener el formato en todas las páginas */
+
+#contenedor_titulos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+    align-items: center;
+    
+    padding: 0;
+    
+    margin: 0;
+    margin-top: 1.5em;
+    height: 225px;
+    width: 100%;
+    background-image: url(../images/bufandacompleta42.png);
+    
+}
+
+#contenedor_titulos div {
+    margin: 0em;
+
+    padding: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    height:100%;
+}
+
+#contenedor_titulos .titulos {
+    
+    flex-grow: 1;
+    overflow-x: auto;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 1360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #228978;
+}
+
+
+
+.titulo_letras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+}
+
+
+.titulo_letras h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 66%;
+    background-color: #5dcd81;
+    color:#373737;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    
+}
+
+.titulo_letras h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34%;
+    width: 100%;
+    background-color: #228978;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+}
+
+#contenedor_alumnos {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+#contenedor_alumnos section {
+    max-width: 1340px;
+    flex: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    
+    
+}
+
+
+/*inscripciones */
+
+#informacion_inscripciones {
+    margin: 1em;
+    padding: 2em; 
+}
+
+.parrafo_general {
+    
+    text-align: center;
+}
+
+.parrafo_general  p {
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    width: 80%;
+
+}
+
+/* seccion de pasos de inscripcion */
+
+#pasos_inscipcion {
+    display: block;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    
+    align-items: center;
+    width: 100%;
+    
+}
+
+#pasos_inscipcion h5 {
+    display: block;
+    background-color: #4ca9ee;
+    color: #373737;
+    padding: 2em;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em;  
+    text-align: center;
+    
+}
+
+#pasos_inscipcion h6 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1em;  
+}
+
+.paso_x_paso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    position: relative;
+}
+
+
+.paso_x_paso label {
+    display: block;
+    cursor: pointer;
+    padding: 1em;
+    margin: 0;
+    background-color: #9ad1f8;
+    color: #373737;
+    font-family: 'Roboto Slab', serif;
+}
+
+.acordeon_mayor {
+    display: block;
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+.acordeon_mayor > input[type="checkbox"] {
+    width: 100%;
+    position: absolute;
+}
+
+.disparador_mayor label {
+    padding: 1.5em;
+}
+
+.acordeon_mayor .contenido_acordeon_mayor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-between;
+    overflow-y: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    -webkit-transition: max-height 0.5s ease;
+    -moz-transition: max-height 0.5s ease;
+    -ms-transition: max-height 0.5s ease;
+    -o-transition: max-height 0.5s ease;
+}
+
+.acordeon_mayor > input[type="checkbox"]:checked ~ .contenido_acordeon_mayor {
+    max-height: 80em;
+    overflow: visible;
+    transition: max-height 1s ease;
+    -webkit-transition: max-height 1s ease;
+    -moz-transition: max-height 1s ease;
+    -ms-transition: max-height 1s ease;
+    -o-transition: max-height 1s ease;
+    
+}
+
+.acordeon_mayor label {
+    display: block;
+}
+
+.acordeon {
+    flex: 1;
+    display: flex;
+    
+    box-shadow: 0 0.2em 0.1em rgba(0, 0,0, 0.2);
+}
+
+.acordeon label {
+    background-color: #9ad1f8;
+    width: 100%;
+}
+
+.acordeon > input[type="checkbox"] {
+    display: none;
+}
+
+.acordeon .contenido_acordeon {
+    background-color: white;
+    overflow-y: hidden;
+    height: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: color 0.5 ease 1s;
+    -moz-transition: color 0.5 ease 1s;
+    -ms-transition: color 0.5 ease 1s;
+    -o-transition: color 0.5 ease 1s;
+    color: transparent;
+    transition: color 0.5 ease 1s;
+}
+
+.acordeon .contenido_acordeon p {
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+
+.acordeon > input[type="checkbox"]:checked ~ .contenido_acordeon {
+    height: 16em;
+    overflow: visible;
+    transition: all 0.3s ease;
+    -webkit-transition: color 0.5 ease 1s;
+    -moz-transition: color 0.5 ease 1s;
+    -ms-transition: color 0.5 ease 1s;
+    -o-transition: color 0.5 ease 1s;
+    color: #373737;
+    transition: color 0.5 ease 1s;
+}
+
+.acordeon label {
+    display: block;
+}
+
+.paso_x_paso input[type="checkbox"] {
+    display: none;
+}
+
+
+.acordeon_mayor .disparador_mayor label::after, 
+.acordeon .disparador label::after,
+.acordeon_oferta_academica label::after {
+    font-family: 'fontawesome';
+    content: "\f054";
+    
+    float: right;
+    margin-left: auto;
+    font-size: .58em;
+    line-height: 1.556em;
+    vertical-align: middle;
+}
+
+.acordeon_mayor > input[type="checkbox"]:checked ~.disparador_mayor label::after,
+ .acordeon > input[type="checkbox"]:checked ~ .disparador label::after, 
+ .acordeon_oferta_academica > input[type="checkbox"]:checked ~ label::after {
+    content: "\f078";
+}
+
+#oferta_academica {
+    margin-top: 2em;
+    width: 100%;
+    box-shadow: 0 0.2em 0.1em rgba(0, 0,0, 0.2);
+}
+
+.acordeon_oferta_academica {
+    background-color: #228978;
+    width: 100%;
+    margin-bottom: 2em;
+    box-shadow: 0 0.2em 0.1em rgba(0, 0,0, 0.2);
+}
+
+.acordeon_oferta_academica label {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    padding: 1em;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+.acordeon_oferta_academica > input[type="checkbox"] {
+    display: none;
+
+}
+
+.acordeon_oferta_academica .contenido_ofac {
+    background-color: #5dcd81;
+    overflow-y: hidden;
+    height: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    
+}
+
+.acordeon_oferta_academica .contenido_ofac p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.acordeon_oferta_academica > input[type="checkbox"]:checked ~ .contenido_ofac {
+    height: 10em;
+    overflow: visible;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    
+}
+
+
+/*tramites*/
+
+#seccion_tramites {
+
+    display: block;
+    
+    margin: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    height: max-content;
+    
+    align-items: center;
+    width: 80%;
+
+    
+}
+
+.informacion_tramites {
+    margin: 1em;
+    padding: 2em;
+    width: 80%;
+}
+
+.informacion_tramites .parrafo_general {
+    text-align: center;
+    
+
+}
+
+.informacion_tramites .parrafo_general {
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    width: 80%;
+
+}
+
+
+.pestanias {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+    color: #373737;
+
+}
+
+.pestanias button {
+    flex: 1;
+    border: none;
+    background-color: #5dcd81;
+    outline: none;
+    cursor: pointer;
+    padding: 1em;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1em;
+}
+
+.pestanias button:hover {
+    background-color: #228978;
+    color: #dce0e3;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+}
+
+.pestanias button.active {
+    background-color: #373737;
+    color: #dce0e3;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+}
+
+.contenido_pestania {
+    display: none;
+    height: max-content;
+    background-color: white;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+
+}
+
+.contenido_pestania div {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+}
+
+.contenido_pestania div label {
+    flex: 30%;
+    
+}
+.contenido_pestania div input {
+    flex: 70%;
+}
+
+.contenido_pestania label, input, p, select {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    
+}
+
+.contenido_pestania input {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+}
+
+.contenido_pestania div p {
+    display: block;
+}
+
+.contenido_pestania .botones_form {
+    justify-content: space-around;
+}
+
+.contenido_pestania .botones_form input{
+    max-width: 6em;
+}
+
+
+
+
+
+
+/* Calendario Academico */
+#contenedor_alumnos_calendario {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 1em;
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+    
+}
+
+.informacion_calendario {
+    width: 80%;
+    margin: 1em;
+    padding: 2em;
+}
+
+
+#contenedor_alumnos_calendario section {
+    max-width: 1340px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+
+
+
+#calendario {
+    padding: 0;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 34em;
+    justify-content: center;
+ 
+}
+
+
+
+.calendario_proper {
+    
+    display: block;
+    align-items: center;
+    margin: 0;
+    flex: 62.5%;
+    height: 32em;
+    
+}
+
+.calendario_embed {
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: 32em;
+    width: 100%;
+}
+
+
+
+/* deslizador de noticias */
+
+#eventos {
+    margin: 1em;
+    display: block;
+    flex: 37.5%;
+    height: 32em;
+}
+
+#marco_deslizador_id {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 100%;
+}
+
+.deslizador {
+    position: absolute;
+    bottom: -100%;/*min*/
+    /*bottom: 0em;/*max*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200%;
+    overflow-y: visible;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+.deslizador.mas_noticias {
+    bottom: 0%;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+#disparador_noticias {
+    
+}
+
+.deslizador a {
+    
+    height: 2em;
+    width: 100%;
+    background-color: #5dcd81;
+    display: block;
+    overflow: visible;
+    text-align: center;
+    text-decoration: none;
+    color: #373737;
+}
+
+
+
+.deslizador a:hover {
+    background-color: #373737;
+    color: #dce0e3;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+
+.eventos article{
+    
+    overflow: visible;
+    flex: 1;
+    padding: 0.5em;
+    border: 0.1em solid #9ad1f8;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    
+}
+
+.titulo_noticias {
+    color: #228978;
+    font-size: 1.5em;
+}
+
+
+/* BIBLIOTECA */
+
+
+#informacion_bilbioteca {
+    margin: 2em;
+    padding: 3em;
+    width: 80%;
+}
+
+#informacion_bilbioteca .parrafo_general {
+    text-align: center;
+    
+
+}
+
+#informacion_bilbioteca .parrafo_general {
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    width: 80%;
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+    /* responsive de la bufanda */
+
+    #contenedor_titulos div {
+        margin: 0em;
+        padding: 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        height:100%;
+    }
+    
+    
+    
+    #contenedor_titulos .titulos {
+        max-width: 991px;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    
+    
+    
+    
+    .titulo_letras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 524px;
+        
+    }
+    
+    
+    .titulo_letras h3 {
+        
+        
+    }
+    
+    .titulo_letras h5 {
+        
+    }
+
+    /* contenedor de alumnos*/
+
+    /*pasos para inscripcion*/
+
+    .acordeon_mayor .contenido_acordeon_mayor {
+        
+        flex-direction: column;
+        
+    }
+
+    /* oferta academica */
+
+    /* calendario */
+
+    #contenedor_alumnos_calendario {
+        margin: 0;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        
+    }
+
+    #calendario {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        
+        
+        align-items: center;
+        width: 100%;
+        height: 60em;
+        justify-content: center;
+        
+    }
+    .calendario_proper {
+    
+        margin: 0;
+        height: 36em;
+        width: 100%;
+        
+    }
+
+    .calendario_embed {
+        height: 100%;
+        
+    }
+
+    #eventos {
+        margin: 1em;
+        
+        height: 24em;
+        width: 100%;
+        
+    }
+
+    #marco_deslizador_id {
+                
+        height: inherit;
+        width: 100%;
+        
+}
+
+    .deslizador {
+        
+        left: 0%;
+        bottom: auto;
+        
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        
+        width: 200%;
+        height: 100%;
+        
+    }
+
+    .deslizador a {
+        margin: 0;
+        
+        height: 100%;
+        width: 2em;
+        display: flex;
+        text-align: center;
+        align-items: center;
+
+
+    }
+
+    .deslizador a i{
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+}
+
+    .deslizador.mas_noticias {
+        left: -100%;
+        bottom: auto;
+        transition: all 0.8s ease;
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
+    }
+
+    .eventos article{
+       
+        height: 100%;
+        flex: 1;
+        
+        
+        width: auto;
+    }
+
+
+
+
+
+
+
+    
+
+    
+
+
+}
+
+@media (max-width: 600px){
+
+    /* responsive de la bufanda */
+
+    .bufanda_der, .bufanda_izq {
+        display: none;
+    }
+
+    
+
+
+
+    /* contenedor de alumnos*/
+
+
+    /*pasos para inscripcion*/
+
+
+
+
+    /* oferta academica */
+
+    /*tramites */
+
+    .contenido_pestania div {
+        flex-direction: column;
+    }
+
+
+
+
+
+}
+
+
+
+ 
+
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+{% extends "templategeneral.html" %}
+{%  load static %}
+
+
+
+{% block title %} Home - UFN {% endblock  %}
+
+{% block main %}  
+
+    <div id="contenedor_titulos">
+
+        <div class="titulos">
+
+            <div class="bufanda_izq"><img src='{% static "images/lateralalto.png" %}' alt="bufanda_izquierda" ></div>
+            <div class="titulo_letras">
+                <img src='{% static "images/Nursing_students.jpg" %}' alt="">
+
+                <h3>Universidad Florence Nightingale</h3>
+                <h5>Nuestro compromiso por la salud es nuestro compromiso con tu educación</h5>
+            </div>
+            <div class="bufanda_der"><img src='{% static "images/lateralalto.png" %}' alt="bufanda_derecha"></div>
+        </div>
+
+    </div>
+
+    <div id="contenedor_index_contenido">
+
+        <section id="informacion_general">
+        
+            <section class="parrafo_general">
+                <p>
+                    En la Universidad Florence Nightingale podrás estudiar Licenciatura en Enfermaría y especializaciones de forma semipresencial con profesionales con amplia experiencia profesional y docente. Tu vocación por la enfermería comienza con nosotros.
+                
+                </p>
+            </section>
+
+        </section>
+
+
+        <section class="banner">
+
+            <div class="cuadrados-container">
+                <div class="subcontainer-cuadrados">
+
+                    <a href= "{% url "inscripciones" %}" class="cuadrado">
+                        <div>
+                            <i class="fa fa-check" aria-hidden="true"></i>
+                            <p>Inscripciones</p> 
+                        
+                        </div>
+
+
+                    </a>
+                </div>
+                <div class="subcontainer-cuadrados">
+                    <a href="{% url "carreras" %}" class="cuadrado">
+                        <div>
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            <p>Carreras</p> 
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="subcontainer-cuadrados">
+                    <a href="#" class="cuadrado">
+                        <div>
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>Aula Virtual</p> 
+                        </div>
+                    </a>
+                </div>
+
+                <div class="subcontainer-cuadrados">
+                    <a href="{% url "acercade" %}" class="cuadrado">
+                        <div>
+                            <i class="fa fa-university" aria-hidden="true"></i>
+                            <p>La UFN</p> 
+                        </div>
+                    </a>
+                </div>
+
+                <div class="subcontainer-cuadrados">
+                    <a href= "{% url "calendario" %}"  class="cuadrado">
+                        <div>
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                            <p>Noticias</p> 
+                        </div>
+                    </a>
+                </div>
+
+                <div class="subcontainer-cuadrados">
+                    <a href="{% url "tramites" %}" class="cuadrado">
+                        <div>
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <p>Trámites</p> 
+                        </div>
+
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="contenedor_noticias">
+            <div class="index_noticias">
+                <p>Noticias</p>
+            </div>
+
+            <div id="marco_deslizador_id" class="marco_deslizador">
+
+                <div id="deslizador_id" class="deslizador">
+                    <a href="javascript:void(0);" class="masnoticias" onclick="FuncionMuestraNoticias()">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                    <article>
+                        <p class="titulo_noticias">Fin de obras en U.F.N.</p>
+                        <p>Fin de obras de reacondicionamiento de los laboratorios de neonatología y contactología</p>
+                        <p>jueves, 26 oct 2023</p>
+                    </article>
+                    <article>
+                        <p class="titulo_noticias">Cumpleaños de la U.F.N.</p>
+                        <p>Tercer aniversario de la Universidad Florence Nightingale</p>
+                        <p>sábado, 28 oct 2023</p>
+                    </article>
+                    <a href="javascript:void(0);" class="masnoticias" onclick="FuncionMuestraNoticias()">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+
+{% endblock  %}

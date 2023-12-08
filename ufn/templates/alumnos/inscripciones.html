@@ -1,0 +1,79 @@
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Inscripciones - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+{% block titulo_bufanda %}Inscripción, Admisión y Matrícula{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}Procedimiento de inscripción{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+<div id="contenedor_alumnos">
+    <section id="informacion_inscripciones">
+    
+        <section class="parrafo_general">
+            <p>
+                El proceso de preinscripción en la UFN se realiza de forma totalmente online. Para ello solo necesitas completar el formulario correspondiente en la sección de trámites en este sitio.
+                El proceso completo para acceder a nuestros cursos es semipresencial y los pasos se explican detalladamente en esta página. Recuerda que debes elegir un curso al preinscribirte.
+                
+            </p>
+        </section>
+
+    </section>
+
+
+
+    <section id="pasos_inscipcion">
+        <h5>Proceso de Matriculación</h5>
+
+        <div class="paso_x_paso">
+            <section class="acordeon_mayor">
+                <input type="checkbox" name="colapsador_mayor" id="disparador_mayor" >
+                <h6 class="disparador_mayor">
+                    <label for="disparador_mayor">Paso por paso para matricularte</label>
+                </h6> 
+                <div class="contenido_acordeon_mayor"> 
+                    <section class="acordeon">
+                        <input type="checkbox" name="colapsador" id="disparador1" >
+                        <div class="disparador">
+                          <label for="disparador1">1. Pre-inscripción</label>
+                        </div>
+                        <div class="contenido_acordeon">
+                          <p>Debes rellenar el formulario de pre-inscripción disponible en la sección de trámites de este sitio. Recuerda que debes elegir qué curso o carrera quieres cursar en este momento, por lo que te recomendamos revisar bien nuestra oferta académica. Asegúrate también de entender el régimen de cursada. </p><br>
+                          <a href="{% url "tramites" %}"><p>Ir a Trámites</p> </a><br>
+                          <a href="{% url "regimen" %}"><p>Ir a Información sobre la cursada</p></a><br>
+                          <a href="{% url "carreras" %}"><p>Ir a Carreras</p></a><br>
+                        </div>
+                    </section>
+                    <section class="acordeon">
+                        <input type="checkbox" name="colapsador" id="disparador2">
+                        <div class="disparador">
+                          <label for="disparador2">2. Inscripción</label>
+                        </div>
+                        <div class="contenido_acordeon">
+                            <p> Una vez realizada la pre-inscripción debes confirmarla en persona presentando la documentación correspondiente. Además de tu DNI se te pedirá tu título secundario. Para ello debes dirigirte en persona a cualquiera de nuestras sedes. Allí además te asignarán un usuario para el aula virtual y podrás elegir las materias a cursar en tu primer cuatrimestre con nosotros.</p><br>
+                            <a href="{% url "sedes" %}"><p>Ir a Sedes</p></a><br>
+                        </div>
+                    </section>
+                    <section class="acordeon">
+                        <input type="checkbox" name="colapsador" id="disparador3">
+                        <div class="disparador">
+                          <label for="disparador3">3. Matrícula</label>
+                        </div>
+                        <div class="contenido_acordeon">
+                          <p>Finalmente, para que puedas cursar, debes pagar la matrícula en persona en cualquiera de las sedes o por transferencia y enviarnos el comprobante mediante el formulario presente en la sección de trámites.</p><br>
+                          <a href="{% url "tramites" %}"><p>Ir a Trámites</p> </a><br>
+                          <a href="{% url "sedes" %}"><p>Ir a Sedes</p></a>
+
+                          
+                        </div>
+                    </section>
+                </div> 
+            </section>
+        </div>
+    </section>
+    
+{% endblock  %}

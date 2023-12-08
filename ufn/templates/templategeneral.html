@@ -1,0 +1,33 @@
+{%  load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} templategen {% endblock  %}</title>
+    <link rel="icon" type="image/x-icon" href='{% static "images/logo_universidad.png" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/style2.css" %}'>
+    
+    <link rel="stylesheet" type="text/css" href='{% static "css/estilo.css" %}'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Open+Sans:wght@500&family=Quicksand:wght@600&display=swap');
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {% include "barranavegacion.html" %}
+    <main>
+        
+
+        {% block main %}
+        
+        {% endblock  %}
+    </main>
+    {% include "footer.html" %}
+</body>

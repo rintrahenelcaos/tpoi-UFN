@@ -1,0 +1,178 @@
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Nuestros alumnos - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+{% block titulo_bufanda %}Nuestros Alumnos{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+    
+
+    
+
+        <div id="contenedor_alumnos">
+            
+
+            <section class="informacion_tramites">
+                <div>
+                    <p class="parrafo_general">
+                        <p style="line-height: 1.5; text-align: center;">
+                            En la UFN, nuestra misión es cultivar la excelencia académica y el desarrollo personal en cada uno de nuestros estudiantes. Nos enorgullece presentar a una comunidad de alumnos excepcionales que, a lo largo de los años, han demostrado un compromiso inquebrantable con su educación y han alcanzado logros notables en diversas disciplinas.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            Nuestros alumnos destacados son el testimonio viviente de nuestro compromiso con la calidad educativa y la formación integral. Su trayectoria sobresaliente abarca desde logros académicos hasta impactos significativos en la sociedad y en el mundo profesional.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <center><h1>¿Qué hace a nuestros alumnos especiales?</h1>
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <b>Excelencia Académica:</b> Nuestros alumnos han sobresalido en sus respectivas áreas de estudio, acumulando premios, becas y distinciones académicas.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <b>Compromiso Social:</b> La UFN fomenta el compromiso social, y nuestros estudiantes han liderado iniciativas de servicio comunitario, contribuyendo a mejorar la vida de quienes los rodean.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <b>Innovación y Emprendimiento:</b> Algunos de nuestros alumnos han fundado exitosas empresas, innovado en sus campos y emprendido proyectos que han impactado positivamente en la sociedad.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <b>Investigación y Descubrimiento:</b> La investigación es un pilar fundamental en la UFN. Nuestros estudiantes han realizado investigaciones pioneras y contribuciones significativas a la base de conocimiento en sus áreas de estudio.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <b>Liderazgo Global:</b> Muchos de nuestros graduados han asumido roles de liderazgo a nivel nacional e internacional, influyendo en políticas, industrias y organizaciones.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <h2><center>Unite a la Comunidad UFN</h2>
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            En la Universidad Florence Nightingale, fomentamos un entorno de aprendizaje que nutre la pasión, la curiosidad y el compromiso de nuestros estudiantes. Si buscas una institución donde tu potencial se cultive y florezca, la UFN es el lugar perfecto para ti.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            Explora nuestras carreras, descubre oportunidades de investigación emocionantes y únete a una comunidad de alumnos destacados que están listos para marcar la diferencia en el mundo.
+                        </p>
+                        
+                        <p style="line-height: 1.5; text-align: center;">
+                            <b>En la UFN, el éxito es la norma, no la excepción.</b>
+                        </p>
+                        
+
+                </div>
+            </section>
+            <section id="seccion_tramites">
+
+
+
+
+
+                <div id="pre-inscripcion" class="contenido_pestania">
+                
+                    <fieldset>
+                        <legend><b> Pre-inscripción</b></legend>
+                        <p>Los todos los campos son obligatorios. </p>
+                        <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido"><br>
+                        <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres"><br>
+                        <label for="dni" name="dni" id="dni">DNI:</label>
+                        <input type="number" name="dni" id="dni" placeholder="ingrese su DNI sin puntos">
+                        <label for="cuil" name="cuil" id="cuil">CUIL:</label>
+                        <input type="number" name="cuil" id="cuil" placeholder="Ingrese su CUIL sin puntos ni guiones">
+                        <br>
+                        <p id="general">Género (como figura en su DNI):
+                            <input type="radio" name="genero" value="masculino" checked>Masculino
+                            <input type="radio" name="genero" value="femenino" >Femenino
+                            <input type="radio" name="genero" value="otro" >Otro
+                        </p>
+                        <p id="alumno_existente">¿Ha estado previamente matriculado en la UFN?:
+                            <input type="radio" name="alumno_existente" value="no" checked>NO
+                            <input type="radio" name="alumno_existente" value="si" >SI
+
+                        </p>
+                    </fieldset>
+
+                </div>
+                <div id="solicitud_titulo" class="contenido_pestania">
+                    <fieldset>
+                        <legend><b> Solicitud de Título</b></legend>
+                        <p>Los todos los campos son obligatorios. </p>
+                        <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido"><br>
+                        <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres"><br>
+                        <label for="dni" name="dni" id="dni">DNI:</label>
+                        <input type="number" name="dni" id="dni" placeholder="ingrese su DNI sin puntos">
+                        <label for="matricula" name="matricula" id="matricula">Matrícula:</label>
+                        <input type="number" name="matricula" id="matricula" placeholder="Ingrese su número de Matrícula sin puntos"><br>
+                        <label for="id_curso" name="id_curso" id="id_curso">Seleccione su carrera/curso:</label>
+                        <select name="id_curso" id="id_curso" size="1">
+                            <option value="enfermeria">Licenciatura en Enfermería</option>
+                            <option value="curso1">Curso 1</option>
+                            <option value="curso2">Curso2</option>
+                        
+                        </select>
+                        <label for="comision" name="comision" id="comision">Comisión:</label>
+                        <input type="number" name="comision" id="comision" placeholder="Ingrese su comision sin puntos"><br>
+                        <label for="fecha_fin" name="fecha_fin" id="fecha fin">Fecha del Último examen aprobado:</label>
+                        <input type="date" value="">
+                    </fieldset>
+                </div>
+                <div id="certificado_regular" class="contenido_pestania">
+                    <fieldset>
+                        <legend><b> Certificado de Alumno Regular</b></legend>
+                        <p>Los todos los campos son obligatorios. </p>
+                        <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido"><br>
+                        <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres"><br>
+                        <label for="matricula" name="matricula" id="matricula">Matrícula:</label>
+                        <input type="number" name="matricula" id="matricula" placeholder="Ingrese su número de Matrícula sin puntos"><br>
+                    </fieldset>
+                </div>
+                <div id="pago_matricula" class="contenido_pestania">
+                    <fieldset>
+                        <legend><b> Pago de Matrícula</b></legend>
+                        <p>Los todos los campos son obligatorios. </p>
+                        <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido"><br>
+                        <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres"><br>
+                        <label for="matricula" name="matricula" id="matricula">Matrícula:</label>
+                        <input type="number" name="matricula" id="matricula" placeholder="Ingrese su número de Matrícula sin puntos"><br>
+                    </fieldset>
+                </div>
+                <div id="seguimiento" class="contenido_pestania">
+                    <fieldset>
+                        <legend><b> Seguimiento de Trámite</b></legend>
+                        <p>Los todos los campos son obligatorios. </p>
+                        <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido"><br>
+                        <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres"><br>
+                        <label for="cod_tramite" name="cod_tramite" id="cod_tramite">Ingrese el código de trámite tal como figura en el comprobante del mismo</label>
+                        <input type="text" name="cod_tramite" id="cod_tramite" placeholder="Código de Trámite">
+                    </fieldset>
+                </div>
+
+
+
+            </section>
+
+        </div>
+
+
+    
+{% endblock  %}

@@ -1,0 +1,199 @@
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Trámites - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+{% block titulo_bufanda %}Trámites{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}Sistema de Trámites On-Line{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+    
+<div id="contenedor_alumnos">
+            
+
+    <section class="informacion_tramites">
+        <div>
+            <p class="parrafo_general">
+            Aquí podrás realizar tu pre-inscripción, pedido de título, certificados de alumno regular e informar el pago de tu matrícula. Además puedes hacer el seguimiento de todos tus trámites.
+
+            </p>
+
+        </div>
+    </section>
+    <section id="seccion_tramites">
+
+        <div class="pestanias">
+            <button class="pestania_link" onclick="CambioTramite(event, 'pre-inscripcion')">Pre-inscripción</button>
+            <button class="pestania_link" onclick="CambioTramite(event, 'solicitud_titulo')">Solicitud de Título</button>
+            <button class="pestania_link" onclick="CambioTramite(event, 'pago_matricula')">Informar pago de Matrícula</button>
+            <button class="pestania_link" onclick="CambioTramite(event, 'seguimiento')">Seguimiento de Trámite</button>
+
+        </div>
+
+        <div id="pre-inscripcion" class="contenido_pestania">
+        
+            <form name="pre-inscripcion_form" onsubmit="return validarPreinscripcion()"><fieldset>
+                
+                <p>Todos los campos son obligatorios. </p>
+                <div>
+                    <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido">
+                </div>
+                <div>
+                    <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres">
+                </div>
+                <div>
+                    <label for="dni" name="dni" id="dni">DNI:</label>
+                    <input type="number" name="dni" id="dni" placeholder="ingrese su DNI sin puntos">
+                </div>
+                <div>
+                    <label for="cuil" name="cuil" id="cuil">CUIL:</label>
+                    <input type="number" name="cuil" id="cuil" placeholder="Ingrese su CUIL sin puntos ni guiones">
+                </div>
+                <div>
+                    <label for="email" name="email" id="email"><e-mail></e-mail>E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su e-mail">
+                </div>
+                <div>
+                    <p id="genero">Género (como figura en su DNI):
+                        <input type="radio" name="genero" value="masculino" >Masculino
+                        <input type="radio" name="genero" value="femenino" >Femenino
+                        <input type="radio" name="genero" value="otro" >Otro
+                    </p>
+                </div>
+                <div>
+                    <p id="alumno_existente">¿Ha estado previamente matriculado en la UFN?:
+                        <input type="radio" name="alumno_existente" value="no" >NO
+                        <input type="radio" name="alumno_existente" value="si" >SI
+
+                    </p>
+                </div>
+                <div>
+                    <label for="id_curso" name="id_curso" id="id_curso">Seleccione su carrera/curso:</label>
+                    <select name="id_curso" id="id_curso" size="1">
+                        <option value=""></option>
+                        <option value="enfermeria">Licenciatura en Enfermería</option>
+                        <option value="curso1">Curso 1</option>
+                        <option value="curso2">Curso2</option>
+                    </select>
+                </div>
+                <div class="botones_form">
+                    <input type="reset" value="Borrar"> 
+                    <input type="submit" value="Enviar"> 
+                </div>
+            </fieldset></form>
+
+        </div>
+        <div id="solicitud_titulo" class="contenido_pestania">
+            <form name="soltit_form" onsubmit="return validarSolicituTit()"><fieldset>
+                
+                <p>Todos los campos son obligatorios. </p>
+                <div>
+                    <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido">
+                </div>  
+                <div>  
+                    <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres">
+                </div>  
+                <div>
+                    <label for="dni" name="dni" id="dni">DNI:</label>
+                    <input type="number" name="dni" id="dni" placeholder="Ingrese su DNI sin puntos">
+                </div>  
+                <div>
+                    <label for="matricula" name="matricula" id="matricula">Matrícula:</label>
+                    <input type="number" name="matricula" id="matricula" placeholder="Ingrese su número de Matrícula sin puntos">
+                </div>  
+                <div>
+                    <label for="id_curso" name="id_curso" id="id_curso">Seleccione su carrera/curso:</label>
+                    <select name="id_curso" id="id_curso" size="1">
+                        <option value="enfermeria">Licenciatura en Enfermería</option>
+                        <option value="curso1">Curso 1</option>
+                        <option value="curso2">Curso2</option>
+                </div>  
+                <div>    
+                    </select>
+                    <label for="comision" name="comision" id="comision">Comisión:</label>
+                    <input type="number" name="comision" id="comision" placeholder="Ingrese su comision sin puntos">
+                </div>  
+                <div>    
+                    <label for="fecha_fin" name="fecha_fin" id="fecha fin">Fecha del Último examen aprobado:</label>
+                    <input type="date" value="">
+                </div> 
+                <div class="botones_form">
+                    <input type="reset" value="Borrar"> 
+                    <input type="submit" value="Enviar"> 
+                </div>
+                
+            </fieldset></form>
+        </div>
+        
+        <div id="pago_matricula" class="contenido_pestania">
+            <form name="pago_matricula_form" onsubmit="return validarPagoMatricula()"><fieldset>
+                <p>Todos los campos son obligatorios. </p>
+                 
+                <div> 
+                    <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido">
+                </div>  
+                <div> 
+                    <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres">
+                </div>  
+                <div> 
+                    <label for="matricula" name="matricula" id="matricula">Matrícula:</label>
+                    <input type="number" name="matricula" id="matricula" placeholder="Ingrese su número de Matrícula sin puntos">
+                </div>  
+                <div> 
+                    <label for="comprobante" name="comprobante" id="comprobante">Comprobante:</label>
+                    <input type="file" id="comprobante" name="comprobante">
+                </div>
+                
+                <div class="botones_form">
+                    <input type="reset" value="Borrar"> 
+                    <input type="submit" value="Enviar"> 
+                </div>
+                
+            </fieldset></form>
+        </div>
+        <div id="seguimiento" class="contenido_pestania">
+            <form name="seguimiento_form" onsubmit="return validarSeguimiento()"><fieldset>
+                <p>Todos los campos son obligatorios. </p>
+                  
+                <div> 
+                    <label for="apellido" name="apellido" id="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus Apellido">
+                </div>  
+                <div> 
+                    <label for="nombre" name="nombre" id="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese sus Nombres">
+                </div>  
+                <div> 
+                    <label for="cod_tramite" name="cod_tramite" id="cod_tramite">Ingrese el código de trámite tal como figura en el comprobante del mismo</label>
+                    <input type="text" name="cod_tramite" id="cod_tramite" placeholder="Código de Trámite">
+                </div> 
+                <div class="botones_form">
+                    <input type="reset" value="Borrar"> 
+                    <input type="submit" value="Enviar"> 
+                </div>
+                    
+            </fieldset></form>
+        </div>
+
+                   
+
+
+
+    </section>
+
+</div>
+    
+
+        
+    
+{% endblock  %}

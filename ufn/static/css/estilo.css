@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto+Slab" ;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 8em;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#contenedor_index, #contenedor_index_contenido {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#contenedor_index section, #contenedor_index_contenido section {
+    max-width: 1340px;
+    flex: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+
+
+/* franja con bufanda*/
+
+#contenedor_titulos {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+        
+
+    
+    align-items: center;
+    
+    padding: 0;
+    
+    margin: 0;
+    margin-top: 1.5em;
+    height: 675px;
+    width: 100%;
+    background-image: url(../images/bufandacompleta42.png);
+    
+}
+
+#contenedor_titulos div {
+    margin: 0em;
+
+    padding: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+    height:100%;
+}
+
+
+
+#contenedor_titulos .titulos {
+    
+    flex-grow: 1;
+    overflow-x: auto;
+    flex-shrink: 1;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-width: 1360px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #228978;
+}
+
+
+
+.titulo_letras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+    
+}
+
+
+.titulo_letras h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 22%;
+    background-color: #5dcd81;
+    color:#373737;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    
+}
+
+.titulo_letras h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 11%;
+    width: 100%;
+    background-color: #228978;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+}
+
+.titulo_letras img {
+    height: 66%;
+    object-fit: none;
+    object-position: 15% 20% ;
+    width: 100%;
+
+}
+
+#contenedor_index_contenido {
+    margin: 1em;
+    padding: 2em;
+    
+}
+
+.parrafo_general {
+    
+    text-align: center;
+}
+
+.parrafo_general  p {
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    text-align: justify;
+    width: 80%;
+
+}
+
+/* contenido */
+
+.banner {
+    margin-top: 2em;
+    color: #fff;
+    text-align: center;
+    width: 80%;
+}
+
+/*cuadrados*/
+
+.cuadrados-container {
+    width: 100%;
+    flex: 1;
+    margin-top: 1em;
+    margin-bottom: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.subcontainer-cuadrados {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    min-width: 25em;
+    background-color: #373737;
+}
+
+
+.cuadrado {
+    width: 20em;
+    height: 12em;
+    background-color: #228978;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+    text-decoration: none;
+    color: #dce0e3;
+    font-weight: bold;
+}
+
+.cuadrado div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cuadrado div i {
+    margin: auto;
+    padding: 0.3em;
+    font-size: 3.5em;
+}
+
+.cuadrado p {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+.cuadrado:hover {
+    background-color:#dce0e3;
+    color: #228978;    
+    border: 2px solid #dce0e3;
+}
+
+/* seccion de noticias */
+
+#contenedor_noticias {
+  
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 1em;
+    margin-bottom: 5em;
+  
+}
+
+.index_noticias {
+    width: 90%;
+    background-color: #4ca9ee;
+
+}
+
+.index_noticias p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    color: #373737;
+    padding: 1em;
+    
+}
+
+#contenedor_noticias div {
+
+    margin: auto;
+    margin-bottom: 1em;
+}
+#contenedor_noticias p {
+    text-align: center;
+}
+
+#marco_deslizador_id {
+    width: 60%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 10em;
+  
+}
+
+.deslizador {
+    position: absolute;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 200%;
+    height: 100%;
+    overflow-y: visible;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+  
+}
+
+.deslizador.mas_noticias {
+    left: -100%;
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+
+.deslizador article{
+  
+    display: block;
+    height: 100%;
+    overflow: visible;
+    flex: 1;
+    padding: 0.5em;
+    border: 0.1em solid #9ad1f8;
+  
+}
+
+.deslizador a {
+    margin: 0;
+    height: 100%;
+    width: 2em;
+    background-color: #4ca9ee;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    text-align: center;
+    text-decoration: none;
+    color: #373737;
+}
+
+
+
+.deslizador a:hover {
+    background-color: #373737;
+    color: #dce0e3;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.titulo_noticias {
+    color: #228978;
+    font-size: 1.5em;
+}
+
+
+
+
+@media (max-width: 991px) {
+
+    main {
+        font-size: 85%;
+
+    }
+
+    #contenedor_titulos div {
+        margin: 0em;
+        padding: 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        height:100%;
+    }
+    
+    #contenedor_titulos .titulos {
+        max-width: 991px;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+    
+    .titulo_letras {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 524px;
+        
+    }
+    
+
+    .banner {
+        
+        width: 100%;
+    }
+
+    .subcontainer-cuadrados {
+        
+        background-color: #373737;
+    }
+
+    #marco_deslizador_id {
+        width: 95%;
+    }
+    
+}
+
+@media (max-width: 600px){
+
+    #contenedor_titulos {
+    
+        height: 225px;
+        
+        
+    }
+    
+    .titulo_letras img {
+        display: none;
+        
+    }
+    
+    .titulo_letras h3 {
+        
+        
+        height: 66%;
+        
+        
+    }
+    
+    .titulo_letras h5 {
+        
+        height: 34%;
+        
+        
+    }
+
+    .bufanda_der, .bufanda_izq {
+        display: none;
+    }
+
+
+
+    main #foto_encabezado {
+        position: relative;
+        margin-top: 3em;
+        display: block;
+        
+        height: auto;
+        
+    }
+        
+    
+    #foto_encabezado img {
+        display: none;
+        
+    }
+    .texto_inf, .texto_sup {
+        display: none;
+    }
+    
+    #encabezado_cel {
+        padding: 2em;
+        height: auto;
+        min-height: 4em;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(34, 137, 120, 0.5);
+        width: 100%;
+
+    }
+
+    
+    .texto_cel {
+        font-size: 2em;
+        display: initial;
+        
+        
+        bottom: 1em;
+
+        
+    }
+
+
+    main { 
+        font-size: 75%;
+    }
+
+    .banner {
+        
+        width: 100%;
+      
+    }
+
+    .subcontainer-cuadrados {
+        margin-top: 0.1em;
+    }
+
+    
+}

@@ -1,0 +1,94 @@
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Calendario Académico - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+{% block titulo_bufanda %}Calendario Académico{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}Fechas y Noticias Importantes{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+
+<div id="contenedor_alumnos_calendario">
+            
+    <section class="informacion_calendario">
+        <section class="parrafo_general">
+            <p>
+                Aquí podrás ver las novedades y noticias relacionadas a la UNF y tendrás disponible todas las fechas importantes para tu cursada
+            </p>
+        </section>
+
+    </section>
+
+    <section id="calendario">
+        
+        <div class="calendario_proper">
+            <!--<iframe  src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%239ad1f8&ctz=America%2FArgentina%2FBuenos_Aires&showTitle=1&title=Calendario%20Acad%C3%A9mico&showPrint=0&showCalendars=0&showTabs=0&showNav=1&src=ZXMuYXIjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230B8043" style="border-width:0" frameborder="0" scrolling="no"></iframe>-->
+            <iframe class="calendario_embed" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234da9ee&ctz=America%2FArgentina%2FBuenos_Aires&title=Calendario&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&src=YmZiZDY2ZWI4ZjA1OGNiNTY5Y2I1NGEzNTk3NjgwMjc2NDA3OWU2MmNhNDVlZDVlMGIxMzVjZjVkMDQ3M2YxMUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+        </div>
+        
+
+        <div id="eventos" class="eventos">
+            
+            <div id="marco_deslizador_id" class="marco_deslizador">
+                
+                <div id="deslizador_id" class="deslizador">
+                    <a href="javascript:void(0);" class="masnoticias" onclick="FuncionMuestraNoticias()">
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <article>
+                        <p class="titulo_noticias">Fin de obras en U.F.N.</p>
+                        <p>Fin de obras de reacondicionamiento de los laboratorios de neonatología y contactología</p>
+                        <p>jueves, 26 oct 2023</p>
+                    </article>
+                    <article>
+                        <p class="titulo_noticias">Cumpleaños de la U.F.N.</p>
+                        <p>Tercer aniversario de la Universidad Florence Nightingale</p>
+                        <p>sábado, 28 oct 2023</p>
+                    </article>
+                    <article>
+                        <p class="titulo_noticias">Visita Ministro de Educación</p>
+                        <p>El Ministro de Educación Porteño visitará la Universidad Florence Nightingale</p>
+                        <p>lunes, 30 oct 2023</p>
+                    </article>
+                    <article>
+                        <p class="titulo_noticias">Examenes Finales</p>
+                        <p>Periodo de Evaluación Presencial Obligatorio para acreditar las materias.</p>
+                        <p>15 – 22 nov 2023</p>
+                    </article>
+                    <article>
+                        <p class="titulo_noticias">Periodo de revisión y aprobación de actas</p>
+                        <p>Periodo de revisión y aprobación de actas. Se publicaran las actas provisorias para su revisión</p>
+                        <p>26 – 28 nov 2023</p>
+                    </article>
+                    <article>
+                        <p class="titulo_noticias">Acto de Colación</p>
+                        <p>Felicitaciones a nuestros estudiantes</p>
+                        <p>martes, 28 nov 2023</p>
+                    </article>
+                    <a href="javascript:void(0);" class="masnoticias" onclick="FuncionMuestraNoticias()">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+
+            </div>
+            
+        </div>
+
+    </section>
+
+
+</div>
+    
+
+    
+
+        
+
+    
+    
+{% endblock  %}

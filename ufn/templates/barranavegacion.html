@@ -1,0 +1,107 @@
+{%  load static %}
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href='{% static "css/style2.css" %}'>
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Open+Sans:wght@500&family=Quicksand:wght@600&display=swap');
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <header>
+        
+        <nav id="navbar_principal">
+        
+            <div class="navbar_izquierda">
+                <picture class=" navbar_logo logo_navbar_institucional">
+                    <a href=" {% url "index" %} ">
+                        <img src='{% static "images/logo_universidad.png" %}' alt="logo_institucional">
+
+                    </a>
+                </picture>
+                <div class="navbar_logo logo_navbar_nombre">
+                    <a href=" {% url "index" %} ">
+                        
+                        <h1 >Universidad <br><span>Florence Nightingale</span> </h1>
+                    </a>
+                </div>
+            </div>
+            <nav class="navbar_derecha">
+
+
+
+                <div class="iconos_sociales">
+                            <a href=" {% url "index" %} ">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </a> 
+                            <a href="#">
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            </a> 
+                            <a href="#">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="{% url "contacto" %}">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a> 
+                </div>
+                <nav id="minavbar" class="navbar_lista_links" >
+                    
+                    <ul class="lista_links_mayor">
+
+
+                        <li class="navbar_item links_navbar">
+                            <a href= "{% url "alumnos" %}">ALUMNOS<h2 hidden>alumnos Universidad Florence Nightingale</h2></a>
+                            <ul >
+                                <li><a href= "{% url "inscripciones" %} ">Inscripciones</a></li>
+                                <li><a href= "{% url "tramites" %}" >Trámites</a></li>
+                                <li><a href= "{% url "calendario" %}" >Calendario Académico</a></li>
+                                <li><a href="{% url "biblioteca" %}">Biblioteca</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_item links_navbar">
+                            <a href="{% url "carreras" %}">CARRERAS Y CURSOS<h2 hidden>Enfermería Universidad Florence Nightingale</h2> </a>
+                           <ul>
+                                <li><a href="{% url "regimen" %}">Información sobre la cursada</a></li>
+                                <li><a href= "{% url "carreras" %}" >Carrera de Enfermería</a></li>
+                                <li><a href= "{% url "carreras" %}" >Tecnicaturas</a></li>
+                                <li><a href= "{% url "carreras" %}" >Diplomaturas</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_item links_navbar">
+                            <a href="{% url "acercade" %}">ACERCA DE</a>
+                            <ul>
+                                <li><a href="{% url "acercade" %}">Sobre la Universidad Florence Nightingale</a></li>
+                                <li><a href= "{% url "autoridades" %}" >Autoridades</a></li>
+                                <li><a href="{% url "sedes" %}">Sedes</a></li>
+                                <li><a href="#">RR.HH.</a></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </nav>
+                <div class="aula_navbar navbar_item">
+                    <a href="#">AULA VIRTUAL</a>
+
+                </div> 
+
+
+                <a href="javascript:void(0);" class="icon" onclick="FuncionResponsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            
+            </nav>
+        </nav>
+        
+
+            
+        
+    </header>
+    <script src='{% static "script/scripmaq.js" %}'></script>
+    
+</body>

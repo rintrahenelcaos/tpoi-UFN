@@ -1,0 +1,174 @@
+{%  load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href='{% static "css/style2.css" %}'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+    </style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav id="navbar_principal">
+        
+            <div class="navbar_izquierda">
+                <picture class=" navbar_logo logo_navbar_institucional">
+                    <a href="#">
+                        <img src='{% static "images/logo_universidad.png" %}' alt="logo_institucional">
+
+                    </a>
+                </picture>
+                <div class="navbar_logo logo_navbar_nombre">
+                    <a href="#">
+                        
+                        <h1 >Universidad <br><span>Florence Nightingale</span> </h1>
+                    </a>
+                </div>
+            </div>
+            <nav class="navbar_derecha">
+
+
+
+                <div class="iconos_sociales">
+                            <a href="#">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </a> 
+                            <a href="#">
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            </a> 
+                            <a href="#">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a> 
+                </div>
+                <nav id="minavbar" class="navbar_lista_links" >
+                    
+                    <ul class="lista_links_mayor">
+
+
+                        <li class="navbar_item links_navbar">
+                            <a href="#">ALUMNOS<h2 hidden>alumnos Universidad Florence Nightingale</h2></a>
+                            <ul >
+                                <li><a href="#">Inscripciones</a></li>
+                                <li><a href="#">Trámites</a></li>
+                                <li><a href="#">Calendario Académico</a></li>
+                                <li><a href="#">Biblioteca</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_item links_navbar">
+                            <a href="#">CARRERAS Y CURSOS<h2 hidden>Enfermería Universidad Florence Nightingale</h2> </a>
+                           <ul>
+                                <li><a href="#">Información sobre la cursada</a></li>
+                                <li><a href="#">Carrera de Enfermería</a></li>
+                                <li><a href="#">Tecnicaturas</a></li>
+                                <li><a href="#">Diplomaturas</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar_item links_navbar">
+                            <a href="#">ACERCA DE</a>
+                            <ul>
+                                <li><a href="#">Sobre la Universidad Florence Nightingale</a></li>
+                                <li><a href="#">Autoridades</a></li>
+                                <li><a href="#">Sedes</a></li>
+                                <li><a href="#">RR.HH.</a></li>
+                            </ul>
+                        </li>
+                    </ul> 
+                </nav>
+                <div class="aula_navbar navbar_item">
+                    <a href="#">AULA VIRTUAL</a>
+
+                </div> 
+
+
+                <a href="javascript:void(0);" class="icon" onclick="FuncionResponsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+            
+            </nav>
+        </nav>
+        
+
+            
+        
+    </header>
+
+    
+
+   
+
+    <!--contenido-->
+    <div class="central" style="height: 20em;">
+        <p>espacio central</p>
+
+    </div>
+
+    <div class="acceso_rapido">
+        <p>acceso rapido</p>
+    </div>
+
+    <div class="calesita_noticias">
+        <p>calesita noticias</p>
+    </div>
+
+    <div class="imagen_de_publicidad">
+        <p>imagen de publicidad</p>
+    </div>
+    
+        
+
+
+    
+
+
+
+<!--fin del contenido-->
+
+<footer>
+    <picture class="logo_footer_institucional">
+        <a href="#">
+            <img src='{% static "images/logo_universidad.png" %}' alt="logo_institucional">
+
+        </a>
+    </picture>
+    <div class="contacto_footer">
+        <p class="footer_institucional">Universidad Florence Nightingale</p> 
+        <p> <i class="fa fa-phone" aria-hidden="true"></i> (011) 5285-4206</p>
+        <a href="index.html">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </a> 
+        <a href="#">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </a> 
+        <a href="#">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="contacto.html">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a> 
+    </div>
+
+
+
+</footer>
+
+    <script src='{% static "script/scripmaq.js" %}'></script>
+</body>
+</html>
