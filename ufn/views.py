@@ -1,10 +1,9 @@
 from django.shortcuts import render, HttpResponse
-
-# Create your views here.
-
+from django.shortcuts import render, redirect
+from .models import Empleado 
 
 def index(request):
-    return render(request,"index.html")
+    return render(request, "index.html")
 
 def contacto(request):
     
@@ -42,3 +41,48 @@ def sedes(request):
 def biblioteca(request):
     return render(request, "alumnos/biblioteca.html")
 
+
+from django.shortcuts import render, redirect
+from .models import Empleado 
+
+def crear_empleado(request):
+    if request.method == 'POST':
+        nombre = request.POST['nombre']
+        Empleado.objects.create(nombre=nombre, ...) 
+        return redirect('lista_empleados')
+
+    return render(request, 'formulario_crear_empleado.html')
+
+def listar_empleados(request):
+    empleados = Empleado.objects.all()
+    return render(request, 'lista_empleados.html', {'empleados': empleados})
+
+
+def editar_empleado(request, empleado_id):
+    empleado = Empleado.objects.get(id=empleado_id)
+
+    if request.method == 'POST':
+
+        nombre = request.POST['nombre']
+
+        empleado.nombre = nombre
+
+        empleado.save()
+
+
+        return redirect('lista_empleados')
+
+    return render(request, 'formulario_editar_empleado.html', {'empleado': empleado})
+
+
+def eliminar_empleado(request, empleado_id):
+    empleado = Empleado.objects.get(id=empleado_id)
+
+    if request.method == 'POST':
+
+        empleado.delete()
+
+    
+        return redirect('lista_empleados')
+
+    return render(request, 'confirmar_eliminar_empleado.html', {'empleado': empleado})
