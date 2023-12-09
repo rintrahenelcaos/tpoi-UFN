@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Empleado</title>
+</head>
+<body>
+    <h1>Editar Empleado</h1>
+    
+    <form method="post" action="{% url 'editar_empleado' empleado.id %}">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="{{ empleado.nombre }}" required>
+
+
+        <button type="submit">Guardar Cambios</button>
+    </form>
+    
+    <a href="{% url 'lista_empleados' %}">Volver a la Lista de Empleados</a>
+</body>
+</html>
