@@ -1,7 +1,13 @@
 from django.db import models
 
-class Empleado(models.Model):
-    nombre = models.CharField(max_length=100)
+# Create your models here.
 
+class Libro(models.Model):
+    titulo = models.CharField(max_length=100)
+    autor = models.CharField(max_length=100)
+    temas = models.CharField(max_length=100)
+    dispon = models.BooleanField()
+    
     def __str__(self):
-        return self.nombre
+        return self.titulo
+

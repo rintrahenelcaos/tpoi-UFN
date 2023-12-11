@@ -651,26 +651,7 @@
 /* BIBLIOTECA */
 
 
-#informacion_bilbioteca {
-    margin: 2em;
-    padding: 3em;
-    width: 80%;
-}
 
-#informacion_bilbioteca .parrafo_general {
-    text-align: center;
-    
-
-}
-
-#informacion_bilbioteca .parrafo_general {
-    margin: auto;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.2em;
-    text-align: justify;
-    width: 80%;
-
-}
 
 
 

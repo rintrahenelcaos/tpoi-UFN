@@ -3,9 +3,9 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path('crear_empleado/', views.crear_empleado, name='ruta_crear_empleado'),
-    path('editar_empleado/<int:empleado_id>/', views.editar_empleado, name='editar_empleado'),
-    path('eliminar_empleado/<int:empleado_id>/', views.eliminar_empleado, name='eliminar_empleado'),
+    path('crear_libro/', views.crear_libro, name='crear_libro'),
+    path('editar_libro/<int:libro_id>/', views.editar_libro, name='editar_libro'),
+    path('eliminar_libro/<int:libro_id>/', views.eliminar_libro, name='eliminar_libro'),
     path("contacto/", views.contacto, name="contacto"),
     path("alumnos/alumnos", views.alumnos, name="alumnos"),
     path("index/", views.index, name="index"),
@@ -18,5 +18,7 @@ urlpatterns = [
     path("acercade/autoridades", views.autoridades, name="autoridades"),
     path("acercade/sedes", views.sedes, name="sedes"),
     path("alumnos/biblioteca", views.biblioteca, name="biblioteca"),
-    path('lista_empleados/', views.listar_empleados, name='lista_empleados'),
+    path('catalogo/', views.catalogo, name='catalogo'),
+    path("gestion_biblioteca/", views.gestion_biblioteca, name="gestion_biblioteca")
+    
 ]

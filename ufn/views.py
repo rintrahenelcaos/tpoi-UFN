@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.shortcuts import render, redirect
-from .models import Empleado 
+from .models import Libro
 
 def index(request):
     return render(request, "index.html")
@@ -38,51 +38,68 @@ def autoridades(request):
 def sedes(request):
     return render(request, "acercade/sedes.html")
 
+
 def biblioteca(request):
-    return render(request, "alumnos/biblioteca.html")
+    libros = Libro.objects.all()
+    
+    return render(request, 'alumnos/biblioteca.html', {'libros': libros})
+
+def gestion_biblioteca(request):
+    libros = Libro.objects.all()
+    return render(request, "gestion_biblioteca.html", {'libros': libros})
+    
 
 
-from django.shortcuts import render, redirect
-from .models import Empleado 
 
-def crear_empleado(request):
+
+def crear_libro(request):
     if request.method == 'POST':
-        nombre = request.POST['nombre']
-        Empleado.objects.create(nombre=nombre, ...) 
-        return redirect('lista_empleados')
+        titulo = request.POST['titulo']
+        autor = request.POST['autor']
+        temas = request.POST['temas']
+        dispon = request.POST['dispon']
+        
+        Libro.objects.create(titulo=titulo, autor=autor, temas=temas, dispon=dispon) 
+        return redirect('gestion_biblioteca')
 
-    return render(request, 'formulario_crear_empleado.html')
+    return render(request, 'crear_libro.html')
 
-def listar_empleados(request):
-    empleados = Empleado.objects.all()
-    return render(request, 'lista_empleados.html', {'empleados': empleados})
-
-
-def editar_empleado(request, empleado_id):
-    empleado = Empleado.objects.get(id=empleado_id)
-
-    if request.method == 'POST':
-
-        nombre = request.POST['nombre']
-
-        empleado.nombre = nombre
-
-        empleado.save()
+def catalogo(request):
+    libros = Libro.objects.all()
+    return render(request, 'catalogo.html', {'libros': libros})
 
 
-        return redirect('lista_empleados')
-
-    return render(request, 'formulario_editar_empleado.html', {'empleado': empleado})
-
-
-def eliminar_empleado(request, empleado_id):
-    empleado = Empleado.objects.get(id=empleado_id)
+def editar_libro(request, libro_id):
+    libro = Libro.objects.get(id=libro_id)
 
     if request.method == 'POST':
 
-        empleado.delete()
+        titulo = request.POST['titulo']
+        autor = request.POST['autor']
+        temas = request.POST['temas']
+        dispon = request.POST['dispon']
+
+        libro.titulo = titulo
+        libro.autor = autor
+        libro.temas = temas
+        libro.dispon = dispon
+
+        libro.save()
+
+
+        return redirect('gestion_biblioteca')
+
+    return render(request, 'editar_libro.html', {'libro': libro})
+
+
+def eliminar_libro(request, libro_id):
+    libro = Libro.objects.get(id=libro_id)
+
+    if request.method == 'POST':
+
+        libro.delete()
 
     
-        return redirect('lista_empleados')
+        return redirect('gestion_biblioteca')
 
-    return render(request, 'confirmar_eliminar_empleado.html', {'empleado': empleado})
+    return render(request, 'eliminar_libro.html', {'libro': libro})

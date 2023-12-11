@@ -1,0 +1,29 @@
+
+{% extends 'templategeneral.html' %}
+
+{% block title %}Crear Nuevo Empleado{% endblock %}
+
+{% block main %}
+    <div id="contenido_formulario">
+        <h2>Crear Nuevo Empleado</h2>
+        <form method="POST" action="{% url 'crear_libro' %}">
+            {% csrf_token %}
+
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required><br>
+            <label for="autor">Autor(es):</label>
+            <input type="text" id="autor" name="autor" required><br>
+            <label for="temas">Temas:</label>
+            <input type="text" id="temas" name="temas" required><br>
+            <label for="dispon">Disponibilidad:</label>
+            <select name="dispon" id="dispon">
+                <option value="True" >Disponible</option>
+                <option value="False">No Disponible</option>
+            </select>
+            
+        
+
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+{% endblock %}

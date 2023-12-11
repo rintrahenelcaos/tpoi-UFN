@@ -1,0 +1,33 @@
+/* BIBLIOTECA */
+
+.consulta_biblioteca {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: red;
+    
+    position: relative;
+
+}
+
+.contenedor_tabla{
+    background-color:#9ad1f8;
+    width: 90%;
+    align-content: center;
+}
+
+.contenedor_tabla table, tr, td, th {
+    border: 1px solid black;
+    
+}
+
+
+
+.tabla_blioteca {
+    background-color: aqua;
+    width: 100%;
+
+}
