@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    background-color: red;
+    background-color: #9ad1f8;
     
     position: relative;
 
@@ -15,7 +15,7 @@
 
 .contenedor_tabla{
     background-color:#9ad1f8;
-    width: 90%;
+    width: 100%;
     align-content: center;
 }
 
@@ -27,7 +27,7 @@
 
 
 .tabla_blioteca {
-    background-color: aqua;
+    
     width: 100%;
 
 }

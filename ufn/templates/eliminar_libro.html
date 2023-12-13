@@ -1,13 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmar Eliminación</title>
-</head>
-<body>
-    <h2>Confirmar Eliminación</h2>
-    <p>¿Estás seguro de que deseas eliminar al empleado? "{{ libro.titulo }}"?</p>
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Gestión Biblioteca / Eliminación - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+
+{% block titulo_bufanda %}UFN{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}Gestión Catálogo de Biblioteca / Eliminación{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+
+<div id="contenedor_alumnos">
+    
+
+
+
+    <section id="pasos_inscipcion">
+        <h2>Confirmar Eliminación</h2>
+    <p>¿Estás seguro de que deseas eliminar la entrada: "{{ libro.titulo }}"?</p>
     
     <form method="POST">
         {% csrf_token %}
@@ -15,5 +28,13 @@
     </form>
 
     <a href="{% url 'gestion_biblioteca' %}">Cancelar</a>
-</body>
-</html>
+
+
+    </section>
+</div>
+    
+    
+
+{% endblock  %}
+
+

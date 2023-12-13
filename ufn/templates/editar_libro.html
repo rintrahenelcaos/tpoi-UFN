@@ -1,33 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Empleado</title>
-</head>
-<body>
-    <h1>Editar Empleado</h1>
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Gestión Biblioteca / Edición - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+
+{% block titulo_bufanda %}UFN{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}Gestión Catálogo de Biblioteca / Edición{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+
+<div id="contenedor_alumnos">
+    <section id="informacion_inscripciones">
     
-    <form method="POST" action="{% url 'editar_libro' libro.id %}">
-        {% csrf_token %}
+        <section class="parrafo_general">
+            <p>
+                
+                
+                
+            </p>
+        </section>
+
+    </section>
+
+
+
+    <section id="pasos_inscipcion">
+        <form method="POST" action="{% url 'editar_libro' libro.id %}">
+            {% csrf_token %}
+            
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" value="{{ libro.titulo }}" required><br>
+            <label for="autor">Autor(es):</label>
+            <input type="text" id="autor" name="autor" value="{{ libro.autor }}" required><br>
+            <label for="temas">Temas:</label>
+            <input type="text" id="temas" name="temas" value="{{ libro.temas }}" required><br>
+            <label for="dispon">Disponibilidad:</label>
+            <select name="dispon" id="dispon" value="{{ libro.dispon }}">
+                <option value="True" >Disponible</option>
+                <option value="False">No Disponible</option>
+            </select><br>
+    
+    
+            <button type="submit">Guardar Cambios</button>
+        </form>
         
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" value="{{ libro.titulo }}" required>
-        <label for="autor">Autor(es):</label>
-        <input type="text" id="autor" name="autor" value="{{ libro.autor }}" required>
-        <label for="temas">Temas:</label>
-        <input type="text" id="temas" name="temas" value="{{ libro.temas }}" required>
-        <label for="dispon">Disponibilidad:</label>
-        <select name="dispon" id="dispon" value="{{ libro.dispon }}">
-            <option value="True" >Disponible</option>
-            <option value="False">No Disponible</option>
-        </select>
+        <a href="{% url 'gestion_biblioteca' %}">Cancelar</a>
 
 
-        <button type="submit">Guardar Cambios</button>
-    </form>
+    </section>
+</div>
     
-    <a href="{% url 'gestion_biblioteca' %}">Volver a la Lista de Empleados</a>
-</body>
-</html>
+    
+
+{% endblock  %}
