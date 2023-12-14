@@ -1,0 +1,51 @@
+{% extends "templategeneralpaginas.html" %}
+
+{%  load static %}
+
+
+
+{% block title %} Biblioteca - UFN {% endblock  %}
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+
+{% block titulo_bufanda %}Biblioteca{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}Consulta de disponibilidad de material{% endblock subtitulo_bufanda %}
+
+{% block  main %}
+
+
+<div id="contenedor_alumnos">
+    <section id="informacion_inscripciones">
+    
+        <section class="parrafo_general">
+            <p>
+                Aquí podrás verificar la disponibilidad de todo el material disponible en nuestra biblioteca.
+                
+                
+            </p>
+        </section>
+
+    </section>
+
+
+
+    <section id="pasos_inscipcion">
+        <h6>Sistema de consulta de bibliográfico</h6>
+
+        {% include "catalogoconsulta.html" %}
+
+        <br><br>
+        <a href= "{% url "gestion_biblioteca" %}" >Ingresar a Gestión de Biblioteca</a>
+        <br>
+        
+    </section>
+
+    
+
+    
+
+        
+
+    
+    
+{% endblock  %}

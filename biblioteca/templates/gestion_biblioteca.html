@@ -4,12 +4,12 @@
 
 
 
-{% block title %} Biblioteca - UFN {% endblock  %}
+{% block title %} Gestión Biblioteca- UFN {% endblock  %}
 <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 
 
-{% block titulo_bufanda %}Biblioteca{% endblock titulo_bufanda %}
-{% block subtitulo_bufanda %}Consulta de disponibilidad de material{% endblock subtitulo_bufanda %}
+{% block titulo_bufanda %}UFN{% endblock titulo_bufanda %}
+{% block subtitulo_bufanda %}Gestión Catálogo de Biblioteca{% endblock subtitulo_bufanda %}
 
 {% block  main %}
 
@@ -19,7 +19,7 @@
     
         <section class="parrafo_general">
             <p>
-                Aquí podrás verificar la disponibilidad de todo el material disponible en nuestra biblioteca.
+                
                 
                 
             </p>
@@ -30,10 +30,22 @@
 
 
     <section id="pasos_inscipcion">
-        <h5>Sistema de consulta de bibliográfico</h5>
+        <h6>Sistema de consulta de bibliográfico</h6>
 
-        {% include "catalogoconsulta.html" %}
+        {% include "catalogo.html" %}
+        <br>
+        
+        <br>
+
+        {% include "crear_libro.html" %}
+
+       <br>
+
+       
+
+
     </section>
+</div>
 
     
 
